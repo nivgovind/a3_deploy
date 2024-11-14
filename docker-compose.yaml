@@ -336,19 +336,19 @@ services:
   #     airflow-init:
   #       condition: service_completed_successfully
   
-  streamlit:
-    build:
-      context: ./streamlit
-      dockerfile: Dockerfile
-    ports:
-      - "8501:8501"
-    env_file:
-      - .env 
-    networks:
-      - app-network
-    depends_on:
-      - fastapi
-    restart: always
+  # streamlit:
+  #   build:
+  #     context: ./streamlit
+  #     dockerfile: Dockerfile
+  #   ports:
+  #     - "8501:8501"
+  #   env_file:
+  #     - .env 
+  #   networks:
+  #     - app-network
+  #   depends_on:
+  #     - fastapi
+  #   restart: always
 
   fastapi:
     build:
